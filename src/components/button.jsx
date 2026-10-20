@@ -1,16 +1,12 @@
 
 function Envia({ onClick, children}) {
+  return (
+    <>
+      <div className="enviarSeleccion">
+      <button className="boton" onClick={()=>onClick()}> {children}</button>
+      </div>
+    </>
+  )
+}
   
-    
-
-    return (
-      <>
-          <div className="enviarSeleccion">
-          <button className="boton" onClick={()=>onClick()}> {children}</button>
-          </div>
-          
-      </>
-    )
-  }
-  
-  export default Envia
+export default Envia

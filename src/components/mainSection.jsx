@@ -1,14 +1,13 @@
-import foto1 from "../assets/invierno.jpg";
-import foto2 from "../assets/otonio.jpg";
-import foto4 from "../assets/verano.jpg";
-import foto3 from "../assets/primavera.jpg";
+import foto1 from "../assets/img1.jpg";
+import foto2 from "../assets/img2.jpg";
+import foto4 from "../assets/img3.jpg";
+import foto3 from "../assets/img4.jpg";
 import Rate from "./rate";
 import Envia from "./button";
 import Modal from "./modal";
 import { useState, useRef  } from "react";
 
 function MainSection() {
-
   const [images, setImages] = useState([
     { src: foto1, rate: 0, id: 1, ref: useRef() },
     { src: foto2, rate: 0, id: 2, ref: useRef() },
@@ -39,8 +38,6 @@ function MainSection() {
     setImages(newImages);
     images.map((img)=>img.ref.current.resetear())
   };
-
-  
 
   return (
     <>

@@ -3,10 +3,15 @@
 /* --- ESTILOS GENERALES (Fondo cremita) --- */
 body {
   margin: 0;
-  background-color: #F5F1E8; /* Fondo crema cálido */
+  background-color: #F5F1E8;
   color: #1A1310;
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
+  
+  /* Agrega esto para organizar el flujo vertical */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* --- ENCABEZADO --- */
@@ -42,20 +47,28 @@ body {
   padding: 22px 0;
 }
 
-.footerPage p {
-  padding: 5px;
-  margin: 0;
+.footerPage {
+  margin-top: auto; /* Empuja el footer al final solo si la página tiene poco contenido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #F5F1E8;
+  background-color: #220D00;
+  border-top: 1px solid #120600;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  padding: 18px 0;
 }
 
 /* --- GALERÍA PRINCIPAL --- */
 .mainSection {
-  min-height: 90vh;
+  min-height: auto; /* Se elimina el 90vh para que no fuerce espacio extra */
   display: flex;
   justify-content: center;
   flex-wrap: wrap; 
   align-items: center;
-  gap: 2.5rem;
-  padding: 3rem 2rem;
+  gap: 2rem;
+  padding: 2rem 2rem 1rem 2rem; /* Se reduce el padding inferior */
 }
 
 /* MARCO ÚNICAMENTE PARA LA IMAGEN (Estilo Cuadro) */
@@ -227,4 +240,10 @@ body {
     transform: scale(1);
     opacity: 1;
   }
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
